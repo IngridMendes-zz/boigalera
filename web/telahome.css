@@ -1,0 +1,52 @@
+    .navbar{
+      background-color: #272b30;
+      border-color: transparent;
+    }
+    td{
+     background-color: #272b30; 
+     border-radius: 0;
+    }
+    table{
+         border-radius: 7px;
+    }
+
+   .abcRioButton.abcRioButtonBlue{
+    display: inline-block;
+    margin-bottom: 0;
+    margin-right: 90px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-color: black;
+    border: 0px solid transparent;
+    white-space: nowrap;
+    padding: 1px 1px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+   }
+
+label {
+      font-family: "yahoma";
+      font-weight: normal;
+    }
+
+.abcRioButtonIcon {
+    background-size: 40px 40px, cover;
+    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #353233), color-stop(100%, black));
+    ;
+    
+}
+
+.abcRioButtonIcon {
+    background-size: 40px 40px, cover;
+    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #353233), color-stop(1%, black));
+    ;
+   
+} 
