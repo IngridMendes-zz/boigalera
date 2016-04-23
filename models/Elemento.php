@@ -49,7 +49,7 @@ class Elemento extends \yii\db\ActiveRecord
             'idelemento' => 'Idelemento',
             'nome' => 'Nome',
             'tempo' => 'Tempo',
-            'descricao' => 'Descricao',
+            'descricao' => 'Descrição',
             'tipo_idtipo' => 'Tipo Idtipo',
         ];
     }

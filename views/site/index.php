@@ -30,7 +30,16 @@ use yii\db\Command;
     <link href="TelaLogin.css" rel="stylesheet" type="text/css">
      <link href="telahome.css" rel="stylesheet" type="text/css">
 
-    
+ <style type="text/css">
+
+    .box {
+        display:none;       
+    }
+    .plus {
+        display:none;
+    }
+
+    </style>   
   </head>
   
   <body>
@@ -58,16 +67,17 @@ use yii\db\Command;
             <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
        
             </div>
-<div id="statusGoogle" style="margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;"></div>
-<div id="status" style="margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;">
+<div id="statusGoogle" style="display:none; margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;"></div>
+<div id="status" style="display:none; margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;">
 </div>
 
-            <div class="col-md-12 text-center" id = "areaLista" style="display:none">
+            <div class="col-xs-12 col-md-12 text-center" id = "areaLista" style="display:none">
               <img id="fotoPerfil">
             <div class="elem777ento-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); 
+    <?php // echo $this->render('_search', ['model' => $searchModel]);
+
 $query = Elemento::find()
         ->join('INNER JOIN', 'parte_contem_elemento','elemento_idelemento = idelemento ')
         ->where('ocorreu=1');
@@ -87,10 +97,10 @@ $query = Elemento::find()
             //'idelemento',
             'nome',
             //'tempo',
-            //'descricao:ntext',
+            'descricao:ntext',
             //'tipo_idtipo',
 
-            /*[
+            [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{curtir} {comentar} {maisum}',
                 'buttons' => [
@@ -100,9 +110,9 @@ $query = Elemento::find()
                                     '<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
                                     data-layout="button" 
                                     data-action="like" data-show-faces="false" data-share="false"></div>',
-                                    ['view', 'idelemento' => $model->idelemento],
+                                    ['view', 'id' => $model->idelemento],
                                     [
-                                        //'class' => 'btn btn-default',
+                                        'class' => 'box',
                                         'title' => 'Curtir',
                                         'data-pjax' => '0',
                                     ]
@@ -111,10 +121,10 @@ $query = Elemento::find()
                         'maisum' => function($url,$model) {
                                 return Html::a(
                                     //'<span>Curtir</span>',
-                                    '<div class="g-plusone" data-annotation="none" data-width="300"></div>',
-                                    ['view', 'idelemento' => $model->idelemento],
+                                    '<div class="g-plusone" data-annotation="none" data-width="300" ></div>',
+                                    ['view', 'id' => $model->idelemento],
                                     [
-                                        //'class' => 'btn btn-default',
+                                        'class' => 'plus',
                                         'title' => '+1',
                                         'data-pjax' => '0',
                                     ]
@@ -122,21 +132,17 @@ $query = Elemento::find()
                             },
                     'comentar' => function($url,$model) {
                                 return Html::a(
-                                    //'<span>Curtir</span>',
-                                    '<div class="fb-comments" 
-                                    data-href=
-                                    "https://developers.facebook.com/docs/plugins/comments#configurator" 
-                                    data-numposts="1"></div>',
-                                    ['view', 'idelemento' => $model->idelemento],
+                                    '<span data-layout="button">Comentar</span>',
+                                    ['elemento/view', 'id' => $model->idelemento],
                                     [
-                                        //'class' => 'btn btn-default',
+                                        'class' => 'box',
                                         'title' => 'Comentar',
                                         'data-pjax' => '0',
                                     ]
                                 );
                             },
                 ],  
-            ],*/
+            ],
 
         ],
     ]); ?>
@@ -226,6 +232,13 @@ $query = Elemento::find()
   function testAPI() {
     document.getElementById("areaLogin").style.display= "none";
     document.getElementById("areaLista").style.display= "block";
+    document.getElementById("status").style.display= "block";
+    
+    var elems = document.getElementsByClassName('box');
+    for(var i = 0; i < elems.length; i++) {
+      elems[i].style.display = 'block';
+       //console.log("Elemento: " + i);
+    }
     console.log('Welcome!  Fetching your information.... ');
 
     FB.api('/me', function(response) {
@@ -287,8 +300,13 @@ $query = Elemento::find()
         document.getElementById('fotoPerfil').src = userPicture;
         document.getElementById('statusGoogle').innerHTML =
         profile.getName();
-
+        document.getElementById("statusGoogle").style.display= "block";
         document.getElementById("areaLista").style.display= "block";
+         var elems = document.getElementsByClassName('plus');
+    for(var i = 0; i < elems.length; i++) {
+      elems[i].style.display = 'block';
+       //console.log("Elemento: " + i);
+    }
       };
 </script>
 </body></html>
