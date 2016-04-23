@@ -29,10 +29,12 @@ use yii\db\Command;
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="TelaLogin.css" rel="stylesheet" type="text/css">
      <link href="telahome.css" rel="stylesheet" type="text/css">
+
     
   </head>
   
   <body>
+
     <div class="cover">
       <div class="navbar navbar-default">
         <div class="container">
@@ -43,20 +45,26 @@ use yii\db\Command;
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center" id = "areaLogin">
-            <h1>iFestival Bem-Vindo!</h1>
-            <p>Login&nbsp;</p>
+            <h1>Faça login para começar</h1>
+            
             <br>
             <br>
             
-            <div class="g-signin2" data-onsuccess="onSignIn" id="loginGoogle" style="margin-left: 85px; margin-top: 15px;" data-theme="dark" ></div>
+            <div class="g-signin2" data-onsuccess="onSignIn" id="loginGoogle"  data-theme="dark" data-callback='signinCallback'   data-scope='https://www.googleapis.com/auth/plus.login'></div>
 
           </br>
-                  
+
+
             <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
        
             </div>
+<div id="statusGoogle" style="margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;"></div>
+<div id="status" style="margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;">
+</div>
+
             <div class="col-md-12 text-center" id = "areaLista" style="display:none">
-            <div class="elemento-index">
+              <img id="fotoPerfil">
+            <div class="elem777ento-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); 
@@ -82,7 +90,7 @@ $query = Elemento::find()
             //'descricao:ntext',
             //'tipo_idtipo',
 
-            [
+            /*[
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{curtir} {comentar} {maisum}',
                 'buttons' => [
@@ -112,7 +120,7 @@ $query = Elemento::find()
                                     ]
                                 );
                             },
-                    /*'comentar' => function($url,$model) {
+                    'comentar' => function($url,$model) {
                                 return Html::a(
                                     //'<span>Curtir</span>',
                                     '<div class="fb-comments" 
@@ -126,9 +134,9 @@ $query = Elemento::find()
                                         'data-pjax' => '0',
                                     ]
                                 );
-                            },*/
-                ],
-            ],
+                            },
+                ],  
+            ],*/
 
         ],
     ]); ?>
@@ -138,11 +146,6 @@ $query = Elemento::find()
 </div>
        
           </div>
-
-<div id="status" style="margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #000; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;">
-</div>
-
-<div id="statusGoogle" style="margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #000; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;"></div>
         </div>
       </div>
     </div>
@@ -224,9 +227,11 @@ $query = Elemento::find()
     document.getElementById("areaLogin").style.display= "none";
     document.getElementById("areaLista").style.display= "block";
     console.log('Welcome!  Fetching your information.... ');
+
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-     
+        document.getElementById('status').innerHTML =
+        response.name;
 
     });
 
@@ -276,10 +281,14 @@ $query = Elemento::find()
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+        var userPicture = profile.getImageUrl();
 
         document.getElementById("areaLogin").style.display= "none";
+        document.getElementById('fotoPerfil').src = userPicture;
         document.getElementById('statusGoogle').innerHTML =
-        'Parabéns ' + profile.getName() + '! Em breve você poderá mostrar todo seu sentimento pelas atrações do festival. AGUARDE.';
+        profile.getName();
+
+        document.getElementById("areaLista").style.display= "block";
       };
 </script>
 </body></html>

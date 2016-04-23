@@ -10,17 +10,25 @@
          border-radius: 7px;
     }
 
-   .abcRioButton.abcRioButtonBlue{
+    #fotoPerfil{
+       border-radius: 50%;
+    }
+
+    .fb-login-button{
+      margin-left:0;
+      }
+
+  .abcRioButton{
     display: inline-block;
     margin-bottom: 0;
-    margin-right: 90px;
+    margin-right:0;   
     font-weight: normal;
     text-align: center;
     vertical-align: middle;
     touch-action: manipulation;
     cursor: pointer;
-    background-color: black;
-    border: 0px solid transparent;
+    background-color: ;
+    border: 1px solid transparent;
     white-space: nowrap;
     padding: 1px 1px;
     font-size: 14px;
@@ -31,22 +39,22 @@
     -ms-user-select: none;
     user-select: none;
    }
-
+   
 label {
-      font-family: "yahoma";
+      font-family: "Arial";
       font-weight: normal;
     }
 
 .abcRioButtonIcon {
     background-size: 40px 40px, cover;
-    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #353233), color-stop(100%, black));
+    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #353233), color-stop(100%, transparent));
     ;
     
 }
 
 .abcRioButtonIcon {
     background-size: 40px 40px, cover;
-    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #353233), color-stop(1%, black));
+    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #353233), color-stop(1%, transparent));
     ;
    
 } 
