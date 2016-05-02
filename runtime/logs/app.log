@@ -1074,3 +1074,1368 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1461436831.348
     'REQUEST_TIME' => 1461436831
 ]
+2016-04-25 18:51:11 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-04-25 18:51:09 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '54839'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461603069.189
+    'REQUEST_TIME' => 1461603069
+]
+2016-04-25 18:51:36 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-04-25 18:51:33 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '54845'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461603093.848
+    'REQUEST_TIME' => 1461603093
+]
+2016-04-25 18:52:18 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-04-25 18:52:16 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '54854'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461603135.952
+    'REQUEST_TIME' => 1461603135
+]
+2016-04-25 18:52:59 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] O endereço solicitado não é válido no contexto.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] O endereço solicitado não é válido no contexto.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-04-25 18:52:58 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '54861'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461603178.327
+    'REQUEST_TIME' => 1461603178
+]
+2016-04-25 18:55:26 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] O endereço solicitado não é válido no contexto.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] O endereço solicitado não é válido no contexto.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-04-25 18:55:26 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '54914'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461603326.274
+    'REQUEST_TIME' => 1461603326
+]
+2016-04-25 18:55:37 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] O endereço solicitado não é válido no contexto.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] O endereço solicitado não é válido no contexto.
+' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\teste\boigalera\views\site\index.php(148): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-04-25 18:55:37 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '54918'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461603337.348
+    'REQUEST_TIME' => 1461603337
+]
+2016-04-25 19:35:49 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'elemento' (T_STRING)' in C:\xampp\htdocs\teste\boigalera\views\site\index.php:139
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-04-25 19:35:49 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/teste/boigalera/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '60790'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461605749.265
+    'REQUEST_TIME' => 1461605749
+]
+2016-04-25 20:09:45 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/view' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/view', Array)
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'PÃ¡gina nÃ£o encontrada.' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-04-25 20:09:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/view'
+    'id' => '3'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/teste/boigalera/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '60971'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fview&id=3'
+    'REQUEST_URI' => '/teste/boigalera/web/index.php?r=site%2Fview&id=3'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461607785.34
+    'REQUEST_TIME' => 1461607785
+]
+2016-04-25 20:29:00 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ',', expecting ']'' in C:\xampp\htdocs\teste\boigalera\views\site\index.php:127
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-04-25 20:29:00 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '57292'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461608940.266
+    'REQUEST_TIME' => 1461608940
+]
+2016-04-25 20:45:41 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ''<g:plusone size="medium" anno' (T_CONSTANT_ENCAPSED_STRING)' in C:\xampp\htdocs\teste\boigalera\views\site\index.php:126
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-04-25 20:45:41 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/teste/boigalera/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '62175'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461609940.919
+    'REQUEST_TIME' => 1461609940
+]
+2016-04-25 21:40:39 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '='' in C:\xampp\htdocs\teste\boigalera\views\site\index.php:76
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-04-25 21:40:39 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '1'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_\";}'
+    'PHPSESSID' => '2dbtph2v23ajg6fovtir2am6h3'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=1; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_%22%3B%7D; PHPSESSID=2dbtph2v23ajg6fovtir2am6h3'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '62820'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461613239.116
+    'REQUEST_TIME' => 1461613239
+]
+2016-04-25 22:33:21 [::1][-][-][error][yii\base\ErrorException:64] exception 'yii\base\ErrorException' with message 'main(): Failed opening required 'C:\xampp\htdocs\teste\boigalera\views\site/gplus-lib/vendor/autoload.php' (include_path='.;C:\xampp\php\PEAR')' in C:\xampp\htdocs\teste\boigalera\views\site\index.php:49
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-04-25 22:33:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '1'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_\";}'
+    'PHPSESSID' => '2dbtph2v23ajg6fovtir2am6h3'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/teste/boigalera/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=1; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=22d8e410f857590363cffab092471fabcb391a5826c261c2567c1fea24e85b10a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dz5kknMQg8C0gTibC73gWbEMpg8V1OM_%22%3B%7D; PHPSESSID=2dbtph2v23ajg6fovtir2am6h3'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '63554'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/teste/boigalera/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461616401.041
+    'REQUEST_TIME' => 1461616401
+]
+2016-04-27 21:22:23 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: _SESSION' in C:\xampp\htdocs\teste\boigalera\views\site\index.php:261
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\views\site\index.php(261): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 261, Array)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#11 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2016-04-27 21:22:22 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '1'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '575dc35d8a82085ac07a0443099a72c43c1db8d3f0ecf408466dfe447a9d92a4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h9nMxPYVRcSHc2vF8dUgpMXtXITaRdCw\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=1; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=575dc35d8a82085ac07a0443099a72c43c1db8d3f0ecf408466dfe447a9d92a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h9nMxPYVRcSHc2vF8dUgpMXtXITaRdCw%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '59782'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461784942.098
+    'REQUEST_TIME' => 1461784942
+]
+2016-04-27 22:49:38 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: site/view' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/view', Array)
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'PÃ¡gina nÃ£o encontrada.' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-04-27 22:49:38 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => '575dc35d8a82085ac07a0443099a72c43c1db8d3f0ecf408466dfe447a9d92a4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"h9nMxPYVRcSHc2vF8dUgpMXtXITaRdCw\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/teste/boigalera/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=575dc35d8a82085ac07a0443099a72c43c1db8d3f0ecf408466dfe447a9d92a4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22h9nMxPYVRcSHc2vF8dUgpMXtXITaRdCw%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '56072'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fview&id=1'
+    'REQUEST_URI' => '/teste/boigalera/web/index.php?r=site%2Fview&id=1'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1461790178.009
+    'REQUEST_TIME' => 1461790178
+]
+2016-04-30 19:07:32 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::MÃºsica' in C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('M\xC3\xBAsica')
+#1 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(202): yii\db\BaseActiveRecord->__get('M\xC3\xBAsica')
+#2 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\DataColumn.php(193): yii\helpers\BaseArrayHelper::getValue(Object(app\models\Elemento), 'M\xC3\xBAsica')
+#3 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\DataColumn.php(204): yii\grid\DataColumn->getDataCellValue(Object(app\models\Elemento), 1, 0)
+#4 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\Column.php(108): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Elemento), 1, 0)
+#5 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(498): yii\grid\Column->renderDataCell(Object(app\models\Elemento), 1, 0)
+#6 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(467): yii\grid\GridView->renderTableRow(Object(app\models\Elemento), 1, 0)
+#7 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(338): yii\grid\GridView->renderTableBody()
+#8 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(151): yii\grid\GridView->renderItems()
+#9 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#14 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#15 C:\xampp\htdocs\teste\boigalera\views\site\index.php(164): yii\base\Widget::widget(Array)
+#16 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#18 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#19 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#20 C:\xampp\htdocs\teste\boigalera\controllers\SiteController.php(52): yii\base\Controller->render('index')
+#21 [internal function]: app\controllers\SiteController->actionIndex()
+#22 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#23 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#25 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#26 C:\xampp\htdocs\teste\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\xampp\htdocs\teste\boigalera\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2016-04-30 19:07:31 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => 'd7d6e2e018a200757f82fe53375e7bd473d0af8474b0b62cc7108a0d932e2ad1a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"OYfPhWlHAZbV0xe9MqM9QKRim3a5ljTe\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=d7d6e2e018a200757f82fe53375e7bd473d0af8474b0b62cc7108a0d932e2ad1a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22OYfPhWlHAZbV0xe9MqM9QKRim3a5ljTe%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/teste/boigalera/web/index.php'
+    'REMOTE_PORT' => '60709'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/teste/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/teste/boigalera/web/index.php'
+    'PHP_SELF' => '/teste/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462036050.975
+    'REQUEST_TIME' => 1462036050
+]

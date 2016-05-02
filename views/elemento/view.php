@@ -6,11 +6,31 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Elemento */
 
-//$this->title = $model->idelemento;
-$this->params['breadcrumbs'][] = ['label' => 'Elementos', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 ?>
+<html><head>
+    <meta name="description" content="Vamos fazer um teste">
+    <title>teste</title>
+    <meta charset="utf-8">
+     <!-- Google +-->
+
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="803971195659-8j2nbjn8af6h972f9kjiei5kteimt3he.apps.googleusercontent.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="TelaLogin.css" rel="stylesheet" type="text/css">
+     <link href="telahome.css" rel="stylesheet" type="text/css">
+     <link rel="canonical" href="http://google.com" />
+<style>
+body{
+  background-color: white;
+}
+</style>
+ </head>    
 <div class="elemento-view">
+  </br>
+  </br>
 
     <h1><?= Html::encode($this->title) ?></h1>
 

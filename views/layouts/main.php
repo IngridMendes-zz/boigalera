@@ -27,7 +27,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'iFestival',
+        'brandLabel' => 'IFESTIVAL',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -36,8 +36,8 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Iniciar', 'url' => ['/site/index']],
-            ['label' => 'Sobre', 'url' => ['/site/about']],
+            ['label' => 'INICIAR', 'url' => ['/site/index']],
+           // ['label' => 'SOBRE', 'url' => ['/site/about']],
             
            
         ],

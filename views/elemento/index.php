@@ -7,10 +7,13 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\ElementoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+
 $this->title = 'Elementos';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="elemento-index">
+
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

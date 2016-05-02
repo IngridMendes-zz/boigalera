@@ -29,6 +29,8 @@ use yii\db\Command;
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="TelaLogin.css" rel="stylesheet" type="text/css">
      <link href="telahome.css" rel="stylesheet" type="text/css">
+     <link rel="canonical" href="http://google.com" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 
  <style type="text/css">
 
@@ -39,23 +41,33 @@ use yii\db\Command;
         display:none;
     }
 
+    .span{
+      color: white;
+    }
+
     </style>   
   </head>
   
-  <body>
+  <body id="fundo">
 
-    <div class="cover">
-      <div class="navbar navbar-default">
+      <div class="cover">
+       <!-- <img src="caprichoso.gif"/>-->
+      <div class="navbar navbar-default" >
         <div class="container">
         </div>
       </div>
 
       <div class="cover-image"></div>
       <div class="container">
+
         <div class="row">
+
+          </br> </br>
+          <img src="10.jpg" class="img-responsive"/>
           <div class="col-md-12 text-center" id = "areaLogin">
-            <h1>Faça login para começar</h1>
-            
+           <!-- <h1>IFESTIVAL</h1> -->
+           
+           
             <br>
             <br>
             
@@ -67,6 +79,7 @@ use yii\db\Command;
             <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
        
             </div>
+
 <div id="statusGoogle" style="display:none; margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;"></div>
 <div id="status" style="display:none; margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;">
 </div>
@@ -74,6 +87,9 @@ use yii\db\Command;
             <div class="col-xs-12 col-md-12 text-center" id = "areaLista" style="display:none">
               <img id="fotoPerfil">
             <div class="elem777ento-index">
+
+             
+
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]);
@@ -230,8 +246,11 @@ $query = Elemento::find()
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
+    
     document.getElementById("areaLogin").style.display= "none";
+
     document.getElementById("areaLista").style.display= "block";
+
     document.getElementById("status").style.display= "block";
     
     var elems = document.getElementsByClassName('box');
@@ -245,10 +264,15 @@ $query = Elemento::find()
       console.log('Successful login for: ' + response.name);
         document.getElementById('status').innerHTML =
         response.name;
+        document.getElementById('status').innerHTML =
+        response.name;
+       
+       });
 
-    });
 
   }
+
+
 </script>
 
 <!--
@@ -291,12 +315,15 @@ $query = Elemento::find()
         console.log("Image URL: " + profile.getImageUrl());
         console.log("Email: " + profile.getEmail());
 
+
+
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
         var userPicture = profile.getImageUrl();
 
         document.getElementById("areaLogin").style.display= "none";
+        
         document.getElementById('fotoPerfil').src = userPicture;
         document.getElementById('statusGoogle').innerHTML =
         profile.getName();
@@ -308,5 +335,16 @@ $query = Elemento::find()
        //console.log("Elemento: " + i);
     }
       };
+
 </script>
-</body></html>
+
+<script >
+  window.___gcfg = {
+    lang: 'pt-BR',
+    parsetags: 'onload'
+  };
+</script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+
+</body ></html>
