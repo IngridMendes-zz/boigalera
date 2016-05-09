@@ -1,5 +1,5 @@
     .navbar{
-      background-color: #3A5FCD;
+      background-color: #3a5795;
       border-color: transparent;
     }
     td{
@@ -31,6 +31,14 @@
          border-radius: 7px;
     }
 
+     .navbar-inverse .navbar-form {
+      border-color: #3a5795;
+    }
+
+    .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+      border-color: #3a5795;
+    }
+
     #fotoPerfil{
        border-radius: 50%;
     }
@@ -38,6 +46,18 @@
     .fb-login-button{
       margin-left:0;
       }
+
+  #fundo{
+  margin:0px;
+  font-family : Tahoma;
+  font-size : 12pt;
+  color : #000000;
+  background-color : #FFFFFF; 
+  background-repeat: repeat;
+  background-image:url('2.jpg');
+  background-attachment:scroll
+    
+  }
 
   #fundo{
     background-color: #F5F5F5;
@@ -73,14 +93,14 @@ label {
 
 .abcRioButtonIcon {
     background-size: 40px 40px, cover;
-    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #3A5FCD), color-stop(100%, transparent));
+    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #3a5795), color-stop(100%, transparent));
     ;
     
 }
 
 .abcRioButtonIcon {
     background-size: 40px 40px, cover;
-    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #3A5FCD), color-stop(1%, transparent));
+    background-image: url(), -webkit-gradient(linear, left top, left bottom, color-stop(1%, #3a5795), color-stop(1%, transparent));
     ;
    
 } 

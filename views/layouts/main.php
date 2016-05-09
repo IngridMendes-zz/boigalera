@@ -17,9 +17,25 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="telahome.css" rel="stylesheet" type="text/css">
+    <link href="TelaLogin.css" rel="stylesheet" type="text/css">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+
+
+ <style>
+ .fb-login-button{
+    background-color: #3a5795;
+    border-color: #3a5795;
+ }
+ .g-signin2{
+    background-color: #3a5795;
+    border-color: #3a5795
+
+ }
+
+ </style>
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -27,22 +43,31 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'iFestival',
+        'brandLabel' => 'IFESTIVAL',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    echo Nav::widget([
-        //'options' => ['class' => 'navbar-nav navbar-right'],
-        /*'items' => [
-            //['label' => 'INICIAR', 'url' => ['/site/index']],
-           // ['label' => 'SOBRE', 'url' => ['/site/about']],
+  echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right',],
+       
+        'items' => array(
             
-           
-        ],*/
+            '<form class="navbar-form navbar-left"> 
+                
+               <button type=""  class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true">Login</button>
+                <button type="" class="g-signin2" data-onsuccess="onSignIn" id="loginGoogle"  data-theme="dark" data-callback="signinCallback"   data-scope="https://www.googleapis.com/auth/plus.login">Google+</button>
+            
+             </form>'
+
+
+        ),
+
     ]);
+    
     NavBar::end();
+    
     ?>
 
     <div class="container">

@@ -31,10 +31,10 @@ body{
 <body id="fundo">
 
 
-<div class="row" style="margin-top: 40px;">
+<div class="row" style="margin-top: 0px;">
 
-  <div class="col-lg-4" style="margin: 10px; 
-  padding: 10px; 
+  <div class="col-lg-4" style="margin-left: 20px; margin-right: 20px; margin-bottom:20px;  
+  padding: 15px; 
   background-color: #fff; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
     <p>
       <a style="padding-right: 15px; font-size: 18px; color: #000; font-weight: bold;"><?php  echo $model->nome; ?> </a>
@@ -48,7 +48,7 @@ body{
       <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="1"></div>
     </span>
   </div>
-  <div class="col-lg-7" style="margin: 10px; padding: 10px; 
+  <div class="col-lg-7" style="margin-left: 20px; margin-right: 20px; padding: 15px; 
   background-color: #fff; box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
     <p style="font-size: 18px; color: #000; font-weight: bold;">
       <?php  

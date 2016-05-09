@@ -46,11 +46,23 @@ use yii\db\Command;
 
     }
 
+     h1,h2,h3{
+      color: #3a5795;
+    }
+    p{
+      color: #3a5795;
+    }
+
+    #logo{
+      margin-left: 8%;
+    }
+
     </style>   
   </head>
   
-  <body id="fundo">
-      <div class="cover">        
+  <body>
+      <div class="cover">
+
 
       <div class="cover-image"></div>
       <div class="container">
@@ -66,20 +78,59 @@ use yii\db\Command;
              <img id="fotoPerfil" width="50px">
           </div>
 
+          <div class="col-md-12 text-center" id = "areaLogin" style="margin-top: 10px"> 
           <img style="margin-top: 35px" src="10.jpg" class="img-responsive"/>
+           <div class="row">
+          <div class="col-md-12">
+            <h2 class="text-center">GALERIA DE FOTOS</h2>
+          </div>
+        </div>
+            
+        <div class="row">
+          <div class="col-md-4">
+            <a><img src="boi.jpg" class="img-responsive"></a>
+            <h3>BOI-BUMBÁ (EVOLUÇÃO)</h3>
+            
+          </div>
+          <div class="col-md-4">
+            <a><img src="rainha.jpg" class="img-responsive"></a>
+            <h3>RAINHA DO FOLCLORE</h3>
+            
+          </div>
+          <div class="col-md-4">
+            <a><img src="cunhã.jpg" class="img-responsive"></a>
+            <h3>CUNHÃ-PORANGA</h3>
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <a><img src="pagé.jpg" class="img-responsive"></a>
+            <h3>PAJÉ</h3>
+            
+          </div>
+          <div class="col-md-4">
+            <a><img src="cantor.jpg" class="img-responsive"></a>
+            <h3>LEVANTADOR DE TOADAS</h3>
+            
+          </div>
+          <div class="col-md-4">
+            <a><img src="galera.jpg" class="img-responsive"></a>
+            <h3>GALERA</h3>
+          </div>
+        </div>
+       
+
+    
+    </br>
+      <img id="logo"src="logo.png" class="img-responsive"/>  
+
+    </br>  
+     </div>    
+
           <div class="col-md-12 text-center" id = "areaLogin" style="margin-top: 35px">           
             
-            <div class="g-signin2" data-onsuccess="onSignIn" id="loginGoogle"  data-theme="dark" data-callback='signinCallback'   data-scope='https://www.googleapis.com/auth/plus.login'></div>
-
-          </br>
-
-
-            <div class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
-       
-            </div>
-
-
-
+           
             <div class="col-xs-12 col-md-12 text-center" id = "areaLista" style="display:none">
             <div class="elem777ento-index">
 
