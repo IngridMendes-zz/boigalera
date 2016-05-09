@@ -49,6 +49,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        //$listElementos = $this->getElemento();
         return $this->render('index');
     }
 
@@ -73,6 +74,18 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
+    }
+
+    public function getElemento()
+    {
+        $query = new \yii\db\Query();
+        $query = $query->select('elemento.nome AS nome, item.nome AS nomeitem, item.descricao AS descricaoitem')
+        ->from('elemento')
+        ->join('INNER JOIN', 'item','item_iditem = iditem ')
+        ->where("status='c'")->all();
+
+        var_dump($query);
+        return $query;
     }
 
     public function actionContact()

@@ -33,7 +33,7 @@ class Elemento extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tempo', 'tipo_idtipo'], 'integer'],
+            [['tempo', 'tipo_idtipo', 'item_iditem'], 'integer'],
             [['descricao'], 'string'],
             [['tipo_idtipo'], 'required'],
             [['nome'], 'string', 'max' => 45]
@@ -47,10 +47,11 @@ class Elemento extends \yii\db\ActiveRecord
     {
         return [
             'idelemento' => 'Idelemento',
-            'nome' => 'Nome',
+            'nome' => '',
             'tempo' => 'Tempo',
-            'descricao' => 'Descrição',
+            'descricao' => '',
             'tipo_idtipo' => 'Tipo Idtipo',
+            'item_iditem' => 'Id Item',
         ];
     }
 
@@ -60,6 +61,11 @@ class Elemento extends \yii\db\ActiveRecord
     public function getTipoIdtipo()
     {
         return $this->hasOne(Tipo::className(), ['idtipo' => 'tipo_idtipo']);
+    }
+
+    public function getItemIditem()
+    {
+        return $this->hasOne(Item::className(), ['iditem' => 'item_iditem']);
     }
 
     /**

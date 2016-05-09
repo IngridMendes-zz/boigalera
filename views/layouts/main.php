@@ -27,20 +27,20 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'IFESTIVAL',
+        'brandLabel' => 'iFestival',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'INICIAR', 'url' => ['/site/index']],
+        //'options' => ['class' => 'navbar-nav navbar-right'],
+        /*'items' => [
+            //['label' => 'INICIAR', 'url' => ['/site/index']],
            // ['label' => 'SOBRE', 'url' => ['/site/about']],
             
            
-        ],
+        ],*/
     ]);
     NavBar::end();
     ?>
@@ -53,11 +53,9 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer">
+<footer class="footer" style="color: #000; text-align: center;">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p >&copy; IComp - UFAM <?= date('Y') ?></p>
     </div>
 </footer>
 

@@ -6,17 +6,12 @@ use app\models\ElementoSearch;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Elemento;
-
-
-
-//use frontend\models\Triagem;
 use yii\db\QueryInterface;
 use yii\base\Configurable;
 use yii\db\ActiveRecord;
 use yii\db\Command;
 ?>
 <html><head>
-    <meta name="description" content="Vamos fazer um teste">
     <title>teste</title>
     <meta charset="utf-8">
      <!-- Google +-->
@@ -35,41 +30,44 @@ use yii\db\Command;
  <style type="text/css">
 
     .box {
-        display:none;       
+        display:none; 
+        min-width: 82px;      
     }
     .plus {
         display:none;
+        min-width: 82px;
     }
 
     .span{
       color: white;
     }
 
+    .nome-elemento{
+
+    }
+
     </style>   
   </head>
   
   <body id="fundo">
-
-      <div class="cover">
-       <!-- <img src="caprichoso.gif"/>-->
-      <div class="navbar navbar-default" >
-        <div class="container">
-        </div>
-      </div>
+      <div class="cover">        
 
       <div class="cover-image"></div>
       <div class="container">
 
         <div class="row">
+          <div class="col-sm-1">
+            <a id="statusGoogle" 
+            style="display:none; margin-top: 30px; color: #000; text-align: right;"></a>            
+            <div id="status" 
+            style="display:none; margin-top: 30px; color: #000; text-align: right;"></div>
+          </div>
+          <div class="col-sm-1" style="text-align: right;">
+             <img id="fotoPerfil" width="50px">
+          </div>
 
-          </br> </br>
-          <img src="10.jpg" class="img-responsive"/>
-          <div class="col-md-12 text-center" id = "areaLogin">
-           <!-- <h1>IFESTIVAL</h1> -->
-           
-           
-            <br>
-            <br>
+          <img style="margin-top: 35px" src="10.jpg" class="img-responsive"/>
+          <div class="col-md-12 text-center" id = "areaLogin" style="margin-top: 35px">           
             
             <div class="g-signin2" data-onsuccess="onSignIn" id="loginGoogle"  data-theme="dark" data-callback='signinCallback'   data-scope='https://www.googleapis.com/auth/plus.login'></div>
 
@@ -80,12 +78,9 @@ use yii\db\Command;
        
             </div>
 
-<div id="statusGoogle" style="display:none; margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;"></div>
-<div id="status" style="display:none; margin: 1rem 1rem 1rem 1rem; padding: 1rem; color: #fff; text-align: justify; font-family: 'Trebuchet MS', Helvetica, sans-serif;">
-</div>
+
 
             <div class="col-xs-12 col-md-12 text-center" id = "areaLista" style="display:none">
-              <img id="fotoPerfil">
             <div class="elem777ento-index">
 
              
@@ -95,8 +90,13 @@ use yii\db\Command;
     <?php // echo $this->render('_search', ['model' => $searchModel]);
 
 $query = Elemento::find()
-        ->join('INNER JOIN', 'parte_contem_elemento','elemento_idelemento = idelemento ')
-        ->where('ocorreu=1');
+        ->join('INNER JOIN', 'item','item_iditem = iditem ')
+        ->where("status='c' ");
+/*
+$query = Elemento::find()
+        ->join('INNER JOIN', 'item','item_iditem = iditem ')
+        ->where("status='c' AND iditem>0");
+*/
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -105,22 +105,26 @@ $query = Elemento::find()
 
 
     <?= GridView::widget([
-        'dataProvider' =>  $dataProvider,
-        //'filterModel' => $searchModel,
+        'dataProvider' =>  $dataProvider,        
         'columns' => [
-            //['class' => 'yii\grid\SerialColumn'],
-
-            //'idelemento',
-            'nome',
-            //'tempo',
-            'descricao:ntext',
-            //'tipo_idtipo',
-
+            [
+              'attribute' => 'nome',
+              'value' => function ($model) {
+                return $model->nome;
+              },
+              'contentOptions'=>['style'=>'font-weight: bold; font-size: 18px;'],
+            ],
+            /*
+            [
+              'attribute' => 'descricao',
+              'value' => 'descricao',
+              'contentOptions'=>['style'=>'text-align: justify; font-size: 12px;'],
+            ],*/
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{curtir} {comentar} {maisum}',
                 'buttons' => [
-                    'curtir' => function($url,$model) {
+                     /*'curtir' => function($url,$model) {
                                 return Html::a(
                                     //'<span>Curtir</span>',
                                     '<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
@@ -134,11 +138,23 @@ $query = Elemento::find()
                                     ]
                                 );
                             },
-                        'maisum' => function($url,$model) {
+                       'maisum' => function($url,$model) {
                                 return Html::a(
-                                    //'<span>Curtir</span>',
                                     '<div class="g-plusone" data-annotation="none" data-width="300" ></div>',
                                     ['view', 'id' => $model->idelemento],
+                                    [
+                                        'class' => 'plus',
+                                        'title' => '+1',
+                                        'data-pjax' => '0',
+                                    ]
+                                );
+                            },*/
+
+                             'maisum' => function($url,$model) {
+                                return Html::a(
+                                    '<span style="background-color: #0D47A1; padding: 5px; border-radius: 2px;
+                                    color: #fff; cursor: pointer;">Ver Mais</span>',
+                                    ['elemento/update', 'id' => $model->idelemento],
                                     [
                                         'class' => 'plus',
                                         'title' => '+1',
@@ -148,7 +164,8 @@ $query = Elemento::find()
                             },
                     'comentar' => function($url,$model) {
                                 return Html::a(
-                                    '<span data-layout="button">Comentar</span>',
+                                    '<span style="background-color: #0D47A1; padding: 5px; border-radius: 2px;
+                                    color: #fff; cursor: pointer;">Ver Mais</span>',
                                     ['elemento/view', 'id' => $model->idelemento],
                                     [
                                         'class' => 'box',
@@ -228,6 +245,8 @@ $query = Elemento::find()
   //
   // These three cases are handled in the callback function.
 
+
+
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
   });
@@ -262,6 +281,9 @@ $query = Elemento::find()
 
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
+      console.log('Username: ' + response.username);
+      console.log('Gênero: ' + response.gender);
+      console.log('ID: ' + response.ID);
         document.getElementById('status').innerHTML =
         response.name;
         document.getElementById('status').innerHTML =
