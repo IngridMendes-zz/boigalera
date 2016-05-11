@@ -57,10 +57,11 @@ use yii\db\Command;
       margin-left: 8%;
     }
 
+
     </style>   
   </head>
   
-  <body>
+  <body id="fundo1">
       <div class="cover">
 
 
