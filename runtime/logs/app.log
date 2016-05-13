@@ -8221,3 +8221,1668 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1462803858.373
     'REQUEST_TIME' => 1462803858
 ]
+2016-05-11 19:24:01 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\boigalera\views\site\index.php(233): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\boigalera\views\site\index.php(233): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-05-11 19:23:55 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/boigalera/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '50602'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/boigalera/web/'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462987430.777
+    'REQUEST_TIME' => 1462987430
+]
+2016-05-11 19:24:30 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\boigalera\views\site\index.php(233): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\boigalera\views\site\index.php(233): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-05-11 19:24:28 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/boigalera/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '50645'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/boigalera/web/'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462987467.579
+    'REQUEST_TIME' => 1462987467
+]
+2016-05-11 19:38:31 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';'' in C:\xampp\htdocs\boigalera\views\elemento\update.php:56
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-11 19:38:31 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '51045'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462988311.005
+    'REQUEST_TIME' => 1462988311
+]
+2016-05-11 19:38:43 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';'' in C:\xampp\htdocs\boigalera\views\elemento\update.php:56
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-11 19:38:43 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '51064'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462988323.677
+    'REQUEST_TIME' => 1462988323
+]
+2016-05-11 19:51:23 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '.'' in C:\xampp\htdocs\boigalera\views\elemento\update.php:47
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-11 19:51:23 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '51545'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462989083.757
+    'REQUEST_TIME' => 1462989083
+]
+2016-05-11 20:01:27 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '100' (T_LNUMBER), expecting ',' or ';'' in C:\xampp\htdocs\boigalera\views\elemento\view.php:53
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-11 20:01:27 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/view'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '51765'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fview&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fview&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462989687.552
+    'REQUEST_TIME' => 1462989687
+]
+2016-05-11 21:00:59 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: model' in C:\xampp\htdocs\boigalera\views\site\index.php:159
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\views\site\index.php(159): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 159, Array)
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2016-05-11 21:00:59 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '53466'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/boigalera/web/index.php?'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462993258.986
+    'REQUEST_TIME' => 1462993258
+]
+2016-05-11 21:01:47 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ','' in C:\xampp\htdocs\boigalera\views\site\index.php:167
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-11 21:01:47 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '53492'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/boigalera/web/index.php?'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462993307.869
+    'REQUEST_TIME' => 1462993307
+]
+2016-05-11 21:02:46 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in C:\xampp\htdocs\boigalera\views\site\index.php:159
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-11 21:02:46 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bX5xMRyGOvpt43lDibOR9YshKaEy4Zez\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=bddb4718730546bdf58418d77ce41829bec67a82ddb0ccd3c8b8c0c799d88ef8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bX5xMRyGOvpt43lDibOR9YshKaEy4Zez%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '53526'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/boigalera/web/index.php?'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462993366.086
+    'REQUEST_TIME' => 1462993366
+]
+2016-05-11 21:27:09 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The 'label' option is required.' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2-bootstrap\Nav.php:159
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2-bootstrap\Nav.php(141): yii\bootstrap\Nav->renderItem(Array)
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2-bootstrap\Nav.php(128): yii\bootstrap\Nav->renderItems()
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\bootstrap\Nav->run()
+#3 C:\xampp\htdocs\boigalera\views\layouts\main.php(64): yii\base\Widget::widget(Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(372): yii\base\Controller->renderContent('\r\n<html><head>\r...')
+#8 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#9 [internal function]: app\controllers\SiteController->actionIndex()
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#13 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#14 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#16 {main}
+2016-05-11 21:27:09 [::1][-][-][info][application] $_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => 'b44e62541f7597475202eb683b4ed2a8922b20373121cebb306209f1ef707892a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iQT6alPdnMjAX7ZIPTLbLBcddHHW7AeR\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.94 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=b44e62541f7597475202eb683b4ed2a8922b20373121cebb306209f1ef707892a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iQT6alPdnMjAX7ZIPTLbLBcddHHW7AeR%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '54334'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/boigalera/web/index.php?'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1462994829.732
+    'REQUEST_TIME' => 1462994829
+]
+2016-05-13 16:09:38 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', 'root', NULL)
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#6 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#13 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#14 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#15 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#16 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#17 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#18 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#19 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#20 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#21 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#22 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#23 C:\xampp\htdocs\boigalera\views\site\index.php(206): yii\base\Widget::widget(Array)
+#24 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#25 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#26 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#27 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#28 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#29 [internal function]: app\controllers\SiteController->actionIndex()
+#30 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#31 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#32 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#33 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#34 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#35 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#36 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(206): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(819): yii\db\Command->prepare(true)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Command.php(375): yii\db\Command->queryInternal('fetchColumn', 0)
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(389): yii\db\Command->queryScalar()
+#6 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\Query.php(296): yii\db\Query->queryScalar('COUNT(*)', NULL)
+#7 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(165): yii\db\Query->count('*', NULL)
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(147): yii\data\ActiveDataProvider->prepareTotalCount()
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\ActiveDataProvider.php(105): yii\data\BaseDataProvider->getTotalCount()
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(79): yii\data\ActiveDataProvider->prepareModels()
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(92): yii\data\BaseDataProvider->prepare()
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\data\BaseDataProvider.php(133): yii\data\BaseDataProvider->getModels()
+#13 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(178): yii\data\BaseDataProvider->getCount()
+#14 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(149): yii\widgets\BaseListView->renderSummary()
+#15 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(307): yii\widgets\BaseListView->renderSection('{summary}')
+#16 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{summary}')
+#17 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#18 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#19 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\grid\GridView.php(282): yii\widgets\BaseListView->run()
+#20 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Widget.php(97): yii\grid\GridView->run()
+#21 C:\xampp\htdocs\boigalera\views\site\index.php(206): yii\base\Widget::widget(Array)
+#22 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#23 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#24 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SiteController))
+#25 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#26 C:\xampp\htdocs\boigalera\controllers\SiteController.php(53): yii\base\Controller->render('index')
+#27 [internal function]: app\controllers\SiteController->actionIndex()
+#28 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#29 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#30 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('', Array)
+#31 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#32 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#33 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#34 {main}
+Additional Information:
+
+2016-05-13 16:09:30 [::1][-][-][info][application] $_COOKIE = [
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '64397'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/boigalera/web/index.php'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463148569.645
+    'REQUEST_TIME' => 1463148569
+]
+2016-05-13 18:39:47 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 18:39:47 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '60128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463157587.561
+    'REQUEST_TIME' => 1463157587
+]
+2016-05-13 18:43:47 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 18:43:47 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '60411'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463157827.055
+    'REQUEST_TIME' => 1463157827
+]
+2016-05-13 18:44:13 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: elemento/updateid=1' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('updateid=1', Array)
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update...', Array)
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'PÃ¡gina nÃ£o encontrada.' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-13 18:44:12 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/updateid=1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '60449'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdateid=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdateid=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463157852.776
+    'REQUEST_TIME' => 1463157852
+]
+2016-05-13 18:48:04 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: elemento/updateid=1' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php:122
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('updateid=1', Array)
+#1 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update...', Array)
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'PÃ¡gina nÃ£o encontrada.' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2016-05-13 18:48:04 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/updateid=1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '60732'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdateid=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdateid=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158084.34
+    'REQUEST_TIME' => 1463158084
+]
+2016-05-13 18:54:56 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 18:54:56 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '61137'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158496.234
+    'REQUEST_TIME' => 1463158496
+]
+2016-05-13 18:56:55 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 18:56:54 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '61389'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158614.958
+    'REQUEST_TIME' => 1463158614
+]
+2016-05-13 18:58:32 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 18:58:32 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '61607'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158712.212
+    'REQUEST_TIME' => 1463158712
+]
+2016-05-13 18:59:03 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '.'' in C:\xampp\htdocs\boigalera\views\elemento\update.php:26
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2016-05-13 18:59:02 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '61642'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158742.944
+    'REQUEST_TIME' => 1463158742
+]
+2016-05-13 18:59:23 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 18:59:23 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '61674'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158763.819
+    'REQUEST_TIME' => 1463158763
+]
+2016-05-13 18:59:40 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 18:59:40 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '61676'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158780.015
+    'REQUEST_TIME' => 1463158780
+]
+2016-05-13 19:02:28 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Elemento::id' in C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\db\BaseActiveRecord.php(246): yii\base\Component->__get('id')
+#1 C:\xampp\htdocs\boigalera\views\elemento\update.php(26): yii\db\BaseActiveRecord->__get('id')
+#2 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\ElementoController))
+#5 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\ElementoController))
+#6 C:\xampp\htdocs\boigalera\controllers\ElementoController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\ElementoController->actionUpdate('1')
+#8 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('elemento/update', Array)
+#12 C:\xampp\htdocs\boigalera\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\boigalera\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2016-05-13 19:02:28 [::1][-][-][info][application] $_GET = [
+    'r' => 'elemento/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    'G_AUTHUSER_H' => '0'
+    '_identity' => '9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[7,\"9eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN\",2592000]\";}'
+    '_csrf' => '50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => 'G_AUTHUSER_H=0; _identity=9057514c16b4c167df3479b3997e8c634480b4afab96f404ade9378c1a2ce91aa%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B7%2C%229eCaKXNR-uvHq6fIUpU0n0G7ZF_36nwN%22%2C2592000%5D%22%3B%7D; _csrf=50cc98a97f2b6b247d1a7f8ed8da0dcfcc0036577f967271d8823f59d3760887a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Hf7QDwY0_mZmshzQpjP9mutJ7Qr8zS-J%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Microsoft SDKs\\TypeScript\\1.0\\;C:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Java\\jdk1.8.0_05;C:\\Program Files (x86)\\Common Files\\Acronis\\SnapAPI\\;C:\\Program Files\\nodejs\\;C:\\WINDOWS\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\;C:\\Users\\Usuario\\AppData\\Roaming\\npm'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/boigalera/web/index.php'
+    'REMOTE_PORT' => '61972'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=elemento%2Fupdate&id=1'
+    'REQUEST_URI' => '/boigalera/web/index.php?r=elemento%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/boigalera/web/index.php'
+    'PHP_SELF' => '/boigalera/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1463158948.565
+    'REQUEST_TIME' => 1463158948
+]

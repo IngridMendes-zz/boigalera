@@ -3,13 +3,21 @@
       border-color: transparent;
     }
     td{
+      max-width: 200px;
      background-color:#f5f5f5; 
      color: #000;
      border-radius: 0;
-         border: 0px solid #f5f5f5;
+      border: 0px solid #f5f5f5;
     }
 
 .summary {
+  display: none;
+}
+
+.thead{
+  display: none;
+}
+thead{
   display: none;
 }
 
@@ -54,9 +62,10 @@
   font-size : 12pt;
   color : #000000;
   background-color : #FFFFFF; 
-  background-repeat: no-repeat;
+  background-repeat: inherit;
   background-image:url('capri.jpg');
-  background-attachment:scroll;
+  background-attachment: inherit;
+  background-size: cover;
     
   }
 

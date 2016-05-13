@@ -12,7 +12,8 @@ use yii\db\ActiveRecord;
 use yii\db\Command;
 ?>
 <html><head>
-    <title>teste</title>
+    <title>iFestival</title>
+    <meta name="description" content="Festival Folclórico de Parintins">
     <meta charset="utf-8">
      <!-- Google +-->
 
@@ -69,13 +70,13 @@ use yii\db\Command;
       <div class="container">
 
         <div class="row">
-          <div class="col-sm-1">
+          <div class="col-sm-1.col-sm-offset-2">
             <a id="statusGoogle" 
             style="display:none; margin-top: 30px; color: #000; text-align: right;"></a>            
             <div id="status" 
             style="display:none; margin-top: 30px; color: #000; text-align: right;"></div>
           </div>
-          <div class="col-sm-1" style="text-align: right;">
+          <div class="col-sm-1.col-sm-offset-2" style="text-align: right;">
              <img id="fotoPerfil" width="50px">
           </div>
 
@@ -132,105 +133,71 @@ use yii\db\Command;
           <div class="col-md-12 text-center" id = "areaLogin" style="margin-top: 35px">           
             
            
-            <div class="col-xs-12 col-md-12 text-center" id = "areaLista" style="display:none">
+            <div class="col-lg-4 col-sm-12 col-lg-offset-4 text-center" id = "areaLista" style="display:none">
             <div class="elem777ento-index">
 
-             
+        
+              <?php 
+
+                $query = Elemento::find()
+                  ->join('INNER JOIN', 'item','item_iditem = iditem ')
+                  ->where("status='c' ");
 
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]);
+                  $dataProvider = new ActiveDataProvider([
+                      'query' => $query,
+                  ]);
+              ?>
 
-$query = Elemento::find()
-        ->join('INNER JOIN', 'item','item_iditem = iditem ')
-        ->where("status='c' ");
-/*
-$query = Elemento::find()
-        ->join('INNER JOIN', 'item','item_iditem = iditem ')
-        ->where("status='c' AND iditem>0");
-*/
+              <?= GridView::widget([
+                  'dataProvider' =>  $dataProvider,        
+                  'columns' => [
+                      [
+                        'attribute' => 'nome',
+                        'value' => function ($model) {
+                          return $model->nome;
+                        },
+                        'contentOptions'=>['style'=>'font-weight: bold; font-size: 18px; text-align: justify;'],
+                      ],
+                      [
+                          'class' => 'yii\grid\ActionColumn',
+                          'template' => '{curtir} {comentar} {maisum}',
+                          'buttons' => [
+                                       'maisum' => function($url,$model) {
+                                          return Html::a(
+                                              '<span style="background-color: #0D47A1; padding-right: 5px; 
+                                              padding-left: 5px;                                   
+                                              padding-bottom: 2px;
+                                              padding-top: 0px; border-radius: 2px;
+                                              color: #fff; cursor: pointer;">+</span>',
+                                              ['elemento/update', 'id' => $model->idelemento],
+                                              [
+                                                  'class' => 'plus',
+                                                  'title' => 'Ver Mais',
+                                                  'data-pjax' => '0',
+                                              ]
+                                          );
+                                      },
+                              'comentar' => function($url,$model) {
+                                          return Html::a(
+                                              '<span style="background-color: #0D47A1; padding-right: 5px; 
+                                              padding-left: 5px;                                    
+                                              padding-bottom: 2px;
+                                              padding-top: 0px; border-radius: 2px;
+                                              color: #fff; cursor: pointer;">+</span>',
+                                              ['elemento/view', 'id' => $model->idelemento],
+                                              [
+                                                  'class' => 'box',
+                                                  'title' => 'Ver Mais',
+                                                  'data-pjax' => '0',
+                                              ]
+                                          );
+                                      },
+                          ],  
+                      ],
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
-    ?>
-
-
-    <?= GridView::widget([
-        'dataProvider' =>  $dataProvider,        
-        'columns' => [
-            [
-              'attribute' => 'nome',
-              'value' => function ($model) {
-                return $model->nome;
-              },
-              'contentOptions'=>['style'=>'font-weight: bold; font-size: 18px;'],
-            ],
-            /*
-            [
-              'attribute' => 'descricao',
-              'value' => 'descricao',
-              'contentOptions'=>['style'=>'text-align: justify; font-size: 12px;'],
-            ],*/
-            [
-                'class' => 'yii\grid\ActionColumn',
-                'template' => '{curtir} {comentar} {maisum}',
-                'buttons' => [
-                     /*'curtir' => function($url,$model) {
-                                return Html::a(
-                                    //'<span>Curtir</span>',
-                                    '<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" 
-                                    data-layout="button" 
-                                    data-action="like" data-show-faces="false" data-share="false"></div>',
-                                    ['view', 'id' => $model->idelemento],
-                                    [
-                                        'class' => 'box',
-                                        'title' => 'Curtir',
-                                        'data-pjax' => '0',
-                                    ]
-                                );
-                            },
-                       'maisum' => function($url,$model) {
-                                return Html::a(
-                                    '<div class="g-plusone" data-annotation="none" data-width="300" ></div>',
-                                    ['view', 'id' => $model->idelemento],
-                                    [
-                                        'class' => 'plus',
-                                        'title' => '+1',
-                                        'data-pjax' => '0',
-                                    ]
-                                );
-                            },*/
-
-                             'maisum' => function($url,$model) {
-                                return Html::a(
-                                    '<span style="background-color: #0D47A1; padding: 5px; border-radius: 2px;
-                                    color: #fff; cursor: pointer;">Ver Mais</span>',
-                                    ['elemento/update', 'id' => $model->idelemento],
-                                    [
-                                        'class' => 'plus',
-                                        'title' => '+1',
-                                        'data-pjax' => '0',
-                                    ]
-                                );
-                            },
-                    'comentar' => function($url,$model) {
-                                return Html::a(
-                                    '<span style="background-color: #0D47A1; padding: 5px; border-radius: 2px;
-                                    color: #fff; cursor: pointer;">Ver Mais</span>',
-                                    ['elemento/view', 'id' => $model->idelemento],
-                                    [
-                                        'class' => 'box',
-                                        'title' => 'Comentar',
-                                        'data-pjax' => '0',
-                                    ]
-                                );
-                            },
-                ],  
-            ],
-
-        ],
-    ]); ?>
+                  ],
+              ]); ?>
 
 </div>
 

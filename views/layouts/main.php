@@ -9,7 +9,6 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
-
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -55,14 +54,12 @@ AppAsset::register($this);
        
         'items' => array(
             
-            '
-             <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-                            
+            '<form class="navbar-form navbar-left"> 
+                
                <button type=""  class="fb-login-button" scope="public_profile,email" onlogin="checkLoginState();" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true">Login</button>
+                <button type="" class="g-signin2" data-onsuccess="onSignIn" id="loginGoogle"  data-theme="dark" data-callback="signinCallback"   data-scope="https://www.googleapis.com/auth/plus.login">Google+</button>
             
-                <button type="" class="g-signin2" data-onsuccess="onSignIn" id="loginGoogle"  data-theme="dark" data-callback="signinCallback"data-scope="https://www.googleapis.com/auth/plus.login">Google+</button>
-            
-            </div> '
+             </form>'
 
 
         ),
