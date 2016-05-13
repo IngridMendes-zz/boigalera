@@ -23,7 +23,7 @@ use yii\filters\AccessControl;
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="TelaLogin.css" rel="stylesheet" type="text/css">
      <link href="telahome.css" rel="stylesheet" type="text/css">
-     <?php echo "<link rel='canonical' href='http://curupira.icomp.ufam.edu.br/boigalera/web/index.php?r=elemento%2Fupdate&id=1' />" ?>
+     <link rel='canonical' href="http://curupira.icomp.ufam.edu.br/boigalera/web/index.php?r=elemento%2Fupdate&id=<?php=$model->id?>" />
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 <style>
 body{
